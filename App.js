@@ -9,6 +9,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import C1 from './componentes/comp1'
+import Estilos from './estilos/Estilos.js'
 
 
 /*
@@ -30,36 +31,16 @@ export default class App1 extends Component{
 }
 */
 
-const estilos = StyleSheet.create({
-
-  container: {
-
-    flex: 1,
-    backgroundColor: '#ddd',
-    alignItems: 'center',
-    justifyContent: 'center',
-
-  },
-
-  txt0: {
-
-    color: '#0f0',
-    fontSize: 10,
-    
-  }
-
-});
-
 
 export default function App1(){
   return (
-    <View style={estilos.container}>
-      <C1 curso="React Native" nota="10" cor="#ff"/>
-      <C1 curso="C++" nota="10" cor="#f0f"/>
-      <C1 curso="JavaScript" nota="10" cor="#0ff"/>
-      <C1 curso="C#" nota="10" cor="#000"/>
-      <Text style={estilos.txt0}>youtube.com/cfbcursos</Text>
-      <Text style={{color: '#f00', fontSize: 30}}>youtube.com/cfbcursos</Text>
+    <View style={Estilos.conteiner}>
+      <C1 curso="React Native" nota="10"/>
+      <C1 curso="C++" nota="10"/>
+      <C1 curso="JavaScript" nota="10"/>
+      <C1 curso="C#" nota="10"/>
+      <Text style={Estilos.textoPadrao}>youtube.com/cfbcursos</Text>
+      <Text style={Estilos.textoTitulo}>youtube.com/cfbcursos</Text>
     </View>
   );
 };
