@@ -35,7 +35,7 @@ const estilos = StyleSheet.create({
   container: {
 
     flex: 1,
-    backgroundColor: '#444',
+    backgroundColor: '#ddd',
     alignItems: 'center',
     justifyContent: 'center',
 
@@ -54,10 +54,10 @@ const estilos = StyleSheet.create({
 export default function App1(){
   return (
     <View style={estilos.container}>
-      <C1/>
-      <C1/>
-      <C1/>
-      <C1/>
+      <C1 curso="React Native" nota="10" cor="#ff"/>
+      <C1 curso="C++" nota="10" cor="#f0f"/>
+      <C1 curso="JavaScript" nota="10" cor="#0ff"/>
+      <C1 curso="C#" nota="10" cor="#000"/>
       <Text style={estilos.txt0}>youtube.com/cfbcursos</Text>
       <Text style={{color: '#f00', fontSize: 30}}>youtube.com/cfbcursos</Text>
     </View>

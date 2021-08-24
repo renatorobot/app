@@ -1,9 +1,16 @@
 import React from 'react';
 import {StyleSheet, Text} from 'react-native';
 
-export default function comp1 (){
+let nt;
+let cor;
+
+export default function comp1 (props){
+
+    nt = props.nota
+    cor=props.cor
+
     return (
-        <Text style={estilos.txt2}>CFB CURSOS</Text>
+        <Text style={estilos.txt2, {color: cor}}>CFB CURSOS - Curso de {props.curso}: Nota={nt}</Text>
     )
 }
 
@@ -16,7 +23,7 @@ const estilos = StyleSheet.create({
 
     txt2:{
 
-        color: '#00f',
+        //color: '#00f',
         fontSize: 15,
 
     }
