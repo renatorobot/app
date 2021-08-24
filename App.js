@@ -8,7 +8,8 @@
 //import React, { Component } from 'react';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import C1 from './componentes/comp1'
+import C1 from './componentes/comp1';
+import Caixas from './componentes/Caixas';
 import Estilos from './estilos/Estilos.js'
 
 
@@ -35,6 +36,7 @@ export default class App1 extends Component{
 export default function App1(){
   return (
     <View style={Estilos.conteiner}>
+      <Caixas/>
       <C1 curso="React Native" nota="10"/>
       <C1 curso="C++" nota="10"/>
       <C1 curso="JavaScript" nota="10"/>

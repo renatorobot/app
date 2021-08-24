@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text, Button} from 'react-native';
 import Estilos from '../estilos/Estilos.js'
 
 
@@ -11,5 +11,9 @@ export default function comp1 (props){
 
     return (
         <Text style={Estilos.textoCursos}>CFB CURSOS - Curso de {props.curso}: Nota={nt}</Text>
+        
     )
+
+        
+
 }
