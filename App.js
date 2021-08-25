@@ -7,7 +7,7 @@
  */
 //import React, { Component } from 'react';
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, Image} from 'react-native';
 import C1 from './componentes/comp1';
 import Caixas from './componentes/Caixas';
 import Estilos from './estilos/Estilos.js'
@@ -52,6 +52,10 @@ export default function App1(){
 
   return (
     <View style={Estilos.conteiner}>
+      <Image
+        source={require('./assets/logo.png')}
+        style={estilos.logo}
+      />
       <Caixas exibir={vexibir}/>
       <C1 curso="React Native" nota="10"/>
       <C1 curso="C++" nota="10"/>
@@ -64,3 +68,15 @@ export default function App1(){
     </View>
   );
 };
+
+
+const estilos = StyleSheet.create({
+
+  logo:{
+    width: 250,
+    resizeMode: 'contain'
+
+  
+  }
+
+})
