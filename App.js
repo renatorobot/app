@@ -32,17 +32,35 @@ export default class App1 extends Component{
 }
 */
 
+/*
+function fexibir(vp1){
+
+  if(vp1){
+    return (<Text>Curso de React Native</Text>)
+  }else{
+    return (<Text> - - -</Text>)
+  }
+
+}
+*/
+
+
 
 export default function App1(){
+
+  let vexibir = true;
+
   return (
     <View style={Estilos.conteiner}>
-      <Caixas/>
+      <Caixas exibir={vexibir}/>
       <C1 curso="React Native" nota="10"/>
       <C1 curso="C++" nota="10"/>
       <C1 curso="JavaScript" nota="10"/>
       <C1 curso="C#" nota="10"/>
       <Text style={Estilos.textoPadrao}>youtube.com/cfbcursos</Text>
       <Text style={Estilos.textoTitulo}>youtube.com/cfbcursos</Text>
+      {vexibir?<Text>Curso de React Native</Text>:<Text> - - -</Text>}
+      {vexibir && <Text>Curso de React Native</Text>}
     </View>
   );
 };
