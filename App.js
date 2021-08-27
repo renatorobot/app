@@ -44,6 +44,24 @@ function fexibir(vp1){
 }
 */
 
+/*
+
+
+Arrow function 
+
+(n) => {return n * 2}
+n => return n * 2
+
+(n1, n2) => {return n1 + n2}
+
+
+*/
+
+
+const dobro = (n) => n * 2
+
+
+const soma = (n1, n2) => n1 + n2;
 
 
 export default function App1(){
@@ -52,11 +70,14 @@ export default function App1(){
 
   return (
     <View style={Estilos.conteiner}>
+
+      <Text>{dobro(2)}</Text>
+      <Text>{soma(2, 4)}</Text>
+
       <Image
         source={require('./assets/logo.png')}
         style={estilos.logo}
       />
-      <Caixas exibir={vexibir}/>
       <C1 curso="React Native" nota="10"/>
       <C1 curso="C++" nota="10"/>
       <C1 curso="JavaScript" nota="10"/>
