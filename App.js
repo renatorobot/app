@@ -7,7 +7,7 @@
  */
 //import React, { Component } from 'react';
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, Button, Alert} from 'react-native';
 import C1 from './componentes/comp1';
 import Caixas from './componentes/Caixas';
 import Estilos from './estilos/Estilos.js'
@@ -70,6 +70,12 @@ export default function App1(){
 
   return (
     <View style={Estilos.conteiner}>
+
+
+      <Button 
+      title="mostar mensagem"
+      onPress={()=>Alert.alert('Mensagem', 'Curso de React Native')}
+      /> 
 
       <Text>{dobro(2)}</Text>
       <Text>{soma(2, 4)}</Text>
