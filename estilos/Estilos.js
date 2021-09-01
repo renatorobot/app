@@ -9,6 +9,7 @@ conteiner: {
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 30
 
 },
 
