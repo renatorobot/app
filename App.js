@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 //import React, { Component } from 'react';
-import React from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, Text, View, Image, Button, Alert, ImageBackground} from 'react-native';
 import C1 from './componentes/comp1';
 import Caixas from './componentes/Caixas';
@@ -18,20 +18,26 @@ const img2 = './assets/imagens/bg2.jpg';
 
 
 export default function App1(){
+
+
+const [ligado, setLigado] = useState(false)
+
   return (
     <View style={Estilos.conteiner}>
-      <ImageBackground 
-
-        source={require(img2)}
-        style={estilos.imagenFund}
-
-      >
+        <Button
+            title={ligado?"Desligar":"Ligar"}
+            onPress={()=>setLigado(!ligado)}
+        />
+        {ligado?
         <View>
           <Text>Curso de React Native</Text>
           <Text>Curso de React Native</Text>
-          {/*<Lp/>*/ }
         </View>
-      </ImageBackground>
+          :
+          <Text>***</Text>
+
+        }
+  
     </View>
   );
 };
