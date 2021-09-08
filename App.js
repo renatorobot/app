@@ -9,8 +9,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, Button, SafeAreaView} from 'react-native';
 import Estilos from './estilos/Estilos.js';
-import CarroC from './componentes/CarroC';
-import CarroF from './componentes/CarroF';
+import CxTx from './componentes/CaixaDeTexto'
 
 
 export default function App1(){
@@ -19,11 +18,9 @@ export default function App1(){
   return (
     <SafeAreaView style={Estilos.conteiner}>
 
-         <Text>Curso de React Native</Text>
-          <Text>Curso de React Native</Text>
-          <CarroF nome="GOLF" />
-          <CarroF nome="Corola" />
-          
+      <Text>Curso de React Native</Text>
+      <Text>Curso de React Native</Text>
+      <CxTx/>
   
     </SafeAreaView>
     
