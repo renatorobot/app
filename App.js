@@ -9,7 +9,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, Button, SafeAreaView} from 'react-native';
 import Estilos from './estilos/Estilos.js';
-import Toque from './componentes/Toque'
+import Modal from './componentes/Modal'
 
 
 export default function App1(){
@@ -20,7 +20,7 @@ export default function App1(){
 
       <Text>Curso de React Native</Text>
       <Text>Curso de React Native</Text>
-      <Toque/>
+      <Modal/>
   
     </SafeAreaView>
     
