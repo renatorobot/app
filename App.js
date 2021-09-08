@@ -9,7 +9,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, Button, SafeAreaView} from 'react-native';
 import Estilos from './estilos/Estilos.js';
-import CxTx from './componentes/CaixaDeTexto'
+import Rolagem from './componentes/Rolagem'
 
 
 export default function App1(){
@@ -20,7 +20,7 @@ export default function App1(){
 
       <Text>Curso de React Native</Text>
       <Text>Curso de React Native</Text>
-      <CxTx/>
+      <Rolagem/>
   
     </SafeAreaView>
     
