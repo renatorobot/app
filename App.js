@@ -7,7 +7,7 @@
  */
 //import React, { Component } from 'react';
 import React, {useState} from 'react';
-import {StyleSheet, Text, View,Button} from 'react-native';
+import {StyleSheet, Text, View, Button, SafeAreaView} from 'react-native';
 import Estilos from './estilos/Estilos.js';
 import CarroC from './componentes/CarroC';
 import CarroF from './componentes/CarroF';
@@ -17,18 +17,18 @@ export default function App1(){
 
 
   return (
-    <View style={Estilos.conteiner}>
-        <View>
+    <SafeAreaView style={Estilos.conteiner}>
+
+         <Text>Curso de React Native</Text>
           <Text>Curso de React Native</Text>
-          <Text>Curso de React Native</Text>
-          <CarroC nome="GOLF" />
-          <CarroC nome="Corola" />
-          <CarroC nome="Jetta" />
-          <CarroC nome="Troller" />
-        </View>
-    </View>
-  )
-}
+          <CarroF nome="GOLF" />
+          <CarroF nome="Corola" />
+          
+  
+    </SafeAreaView>
+    
+  );
+};
 
 const estilos = StyleSheet.create({
 
