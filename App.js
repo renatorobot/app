@@ -7,40 +7,28 @@
  */
 //import React, { Component } from 'react';
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, Image, Button, Alert, ImageBackground} from 'react-native';
-import C1 from './componentes/comp1';
-import Caixas from './componentes/Caixas';
-import Lp from './componentes/ListaPlana';
+import {StyleSheet, Text, View,Button} from 'react-native';
 import Estilos from './estilos/Estilos.js';
-
-const img1 = './assets/imagens/bg1.jpg';
-const img2 = './assets/imagens/bg2.jpg';
+import CarroC from './componentes/CarroC';
+import CarroF from './componentes/CarroF';
 
 
 export default function App1(){
 
 
-const [ligado, setLigado] = useState(false)
-
   return (
     <View style={Estilos.conteiner}>
-        <Button
-            title={ligado?"Desligar":"Ligar"}
-            onPress={()=>setLigado(!ligado)}
-        />
-        {ligado?
         <View>
           <Text>Curso de React Native</Text>
           <Text>Curso de React Native</Text>
+          <CarroC nome="GOLF" />
+          <CarroC nome="Corola" />
+          <CarroC nome="Jetta" />
+          <CarroC nome="Troller" />
         </View>
-          :
-          <Text>***</Text>
-
-        }
-  
     </View>
-  );
-};
+  )
+}
 
 const estilos = StyleSheet.create({
 
