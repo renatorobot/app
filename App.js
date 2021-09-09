@@ -1,22 +1,41 @@
-import React, {Component} from 'react';
-//import React from 'react';
+
+import React, {useState} from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Globais from './componentes/Globais';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
-export default class App1 extends Component{
+export default function App1(){
 
-  nome = Globais.nome;
-  canal = Globais.canal;
-  num = Globais.num;
+  const [curso, setCurso]=useState(null);
 
-  render(){
-    return (
-      <View>
-      <Text>{this.nome}</Text>
-      <Text>{this.canal}</Text>
-      <Text>{this.num}</Text>
-    </View>
-    );
+  const Armazenar = (chave, valor) => {
+    AsyncStorage.setItem(chave, valor)
   }
+
+  const Buscar = async (chave) => {
+
+    const valor = await AsyncStorage.getItem(chave)
+    setCurso(valor)
+
+  }
+
+  Armazenar('01', 'React Native')
+  Armazenar('02', 'Java')
+  Armazenar('03', 'C++')
+  Armazenar('04', 'PHP')
+
+
+  Buscar('01')
+
+  return(
+
+    <View>
+      <Text>Amazenamento Local Async - Storage</Text>
+      <Text>Curso de {curso}</Text>
+    </View>
+
+  );
+
 };
+
+
