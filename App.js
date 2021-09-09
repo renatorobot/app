@@ -1,62 +1,22 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-//import React, { Component } from 'react';
-import React, {useState} from 'react';
-import {StyleSheet, Text, View, Button, SafeAreaView, StatusBar} from 'react-native';
-import Estilos from './estilos/Estilos.js';
+import React, {Component} from 'react';
+//import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import Globais from './componentes/Globais';
 
 
+export default class App1 extends Component{
 
-export default function App1(){
+  nome = Globais.nome;
+  canal = Globais.canal;
+  num = Globais.num;
 
-  const[cor, setCor]=useState("black")
-
-  return (
-    <SafeAreaView style={Estilos.conteiner}>
-      <StatusBar 
-      backgroundColor={cor}
-      barStyle="default" 
-      hidden={false}
-      />
-      <Text>Curso de React Native</Text>
-      <Text>Curso de React Native</Text>
-
-      <Button title="vermelho"
-      onPress={()=>setCor("red")}
-      />
-
-      <Button title="Azul"
-      onPress={()=>setCor("blue")}
-      />
-
-      <Button title="Verde"
-      onPress={()=>setCor("green")}
-      />
-  
-    </SafeAreaView>
-    
-  );
-};
-
-const estilos = StyleSheet.create({
-
-  logo:{
-    width: 250,
-    resizeMode: 'contain'
-
-  
-  },
-
-  imagenFund:{
-    
-    flex: 1,
-    resizeMode: 'cover',
-    width: "100%",
+  render(){
+    return (
+      <View>
+      <Text>{this.nome}</Text>
+      <Text>{this.canal}</Text>
+      <Text>{this.num}</Text>
+    </View>
+    );
   }
-
-})
+};
