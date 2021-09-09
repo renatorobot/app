@@ -9,7 +9,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, Button, SafeAreaView} from 'react-native';
 import Estilos from './estilos/Estilos.js';
-import Modal from './componentes/Modal'
+import Rl from './componentes/Rolagem'
 
 
 export default function App1(){
@@ -20,7 +20,7 @@ export default function App1(){
 
       <Text>Curso de React Native</Text>
       <Text>Curso de React Native</Text>
-      <Modal/>
+      <Rl/>
   
     </SafeAreaView>
     
